@@ -31,9 +31,9 @@
 :root {
   --nav-color: #ffffff;  /* The default color of the main navmenu links */
   --nav-hover-color: #24CBD3; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #212529; /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-mobile-background-color: #2f2f2f; /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #242424; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: #ffffff; /* Used for navigation links of the dropdown items in the navigation menu. */
   --nav-dropdown-hover-color: #24CBD3; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
@@ -44,12 +44,26 @@
   --surface-color: #ffffff;
 }
 
+.accent-background {
+  --background-color: #037f89;
+  --default-color: #ffffff;
+  --surface-color: #ffffff;
+  --heading-color: #ffffff;
+}
+
 .dark-background {
   --background-color: #060606;
   --default-color: #ffffff;
   --heading-color: #ffffff;
   --surface-color: #252525;
   --contrast-color: #ffffff;
+}
+
+.gradient-background {
+  background: rgb(150,233,252);
+  background: linear-gradient(0deg, rgba(150,233,252,0.958420868347339) 40%, rgba(150,233,252,0) 100%);
+  /* background: rgb(6,6,6);
+  background: linear-gradient(0deg, rgba(6,6,6,1) 0%, rgba(150,233,252,0) 10%); */
 }
 
 /* Smooth scroll */
@@ -201,7 +215,14 @@ h6 {
   color: var(--accent-color);
 }
 
+.scrolled .header .topbar {
+  height: 0;
+  visibility: hidden;
+  overflow: hidden;
+}
+
 .header .branding {
+  /* background-color: var(--background-color); */
   background-color: color-mix(in srgb, var(--default-color), transparent 95%);
   min-height: 50px;
 }
@@ -215,7 +236,7 @@ h6 {
   margin-right: 8px;
 }
 
-.header .logo h1 {
+.header .logo .sitename {
   font-size: 30px;
   margin: 0;
   font-weight: 700;
@@ -540,7 +561,8 @@ h6 {
 }
 
 .footer .footer-top {
-  padding-top: 50px;
+  padding-top: 25px;
+  padding-bottom: 25px;
   border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
@@ -555,13 +577,19 @@ h6 {
 }
 
 .footer .footer-about .logo {
-  margin-bottom: 5px;
+  margin-bottom: 5%;
   letter-spacing: 1px;
   font-family: var(--heading-font);
   color: var(--heading-color);
   font-size: 36px;
   padding: 0;
   font-weight: 700;
+}
+
+.footer .footer-about .logo img {
+  line-height: 1;
+  max-height: 64px;
+  margin-right: 8px;
 }
 
 .footer .footer-about p {
@@ -841,7 +869,7 @@ section,
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 20px;
-  padding-bottom: 0;
+  padding-bottom: 10px;
   position: relative;
   z-index: 2;
 }
@@ -849,7 +877,7 @@ section,
 .section-title span {
   position: absolute;
   top: 4px;
-  color: color-mix(in srgb, var(--heading-color), transparent 95%);
+  color: color-mix(in srgb, var(--heading-color), transparent 90%);
   left: 0;
   right: 0;
   z-index: 1;
@@ -857,6 +885,32 @@ section,
   font-size: 52px;
   text-transform: uppercase;
   line-height: 1;
+}
+
+.section-title h2:before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 8em;
+  height: 2px;
+  background: color-mix(in srgb, var(--default-color), transparent 60%);
+  left: 0;
+  right: 0;
+  bottom: 1px;
+  margin: auto;
+}
+
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 4em;
+  height: 4px;
+  background: var(--accent-color);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
 }
 
 .section-title p {
@@ -879,17 +933,208 @@ section,
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
+
 .hero {
   width: 100%;
   min-height: 100vh;
   position: relative;
-  padding: 160px 0 100px 0;
+  /* padding: 100px 0 0 0; */
+  /* background-color: var(--background-color); */
+  padding: 0;
+  /* margin-top: 60px; */
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+.hero .carousel {
+  width: 100%;
+  /* min-height: calc(100vh - 100px); */
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  background-color: var(--background-color);
+  position: relative;
+}
+
 .hero img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.hero .carousel-item {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.hero .carousel-item:before {
+  content: "";
+  background: color-mix(in srgb, var(--background-color), transparent 60%);
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+
+.hero .carousel-container {
+  position: absolute;
+  inset: 90px 64px 64px 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 3;
+}
+
+.hero h2 {
+  margin: 0;
+  font-size: 48px;
+  text-transform: uppercase;
+  font-weight: 700;
+  animation: fadeInDown 1s both;
+}
+
+.hero p {
+  margin: 10px 0 0 0;
+  font-size: 24px;
+  color: var(--heading-color);
+  animation: fadeInDown 1s both 0.2s;
+}
+
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 30px;
+  }
+}
+@media (min-width: 1024px) {
+
+  .hero h2,
+  .hero p {
+    max-width: 60%;
+  }
+}
+
+.hero .btn-get-started {
+  color: var(--default-color);
+  font-weight: 400;
+  font-size: 15px;
+  display: inline-block;
+  padding: 8px 30px;
+  margin: 30px 0 0 0;
+  transition: 0.5s;
+  text-transform: uppercase;
+  border: 2px solid color-mix(in srgb, var(--default-color), transparent 20%);
+  animation: fadeInUp 1s both 0.4s;
+}
+
+.hero .btn-get-started:hover {
+  color: var(--contrast-color);
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.hero .btn-scroll {
+  transition: 0.4s;
+  color: var(--default-color);
+  display: block;
+  margin-top: 30px;
+  animation: btn-up-down 1s ease-in-out infinite alternate-reverse both;
+}
+
+.hero .btn-scroll i {
+  font-size: 48px;
+}
+
+.hero .btn-scroll:hover {
+  color: var(--accent-color);
+}
+
+@keyframes btn-up-down {
+  0% {
+    transform: translateY(5px);
+  }
+
+  100% {
+    transform: translateY(-5px);
+  }
+}
+
+.hero .carousel-control-prev,
+.hero .carousel-control-next {
+  width: 10%;
+  transition: 0.3s;
+  opacity: 0.5;
+}
+
+.hero .carousel-control-prev:focus,
+.hero .carousel-control-next:focus {
+  opacity: 0.5;
+}
+
+.hero .carousel-control-prev:hover,
+.hero .carousel-control-next:hover {
+  opacity: 0.9;
+}
+
+@media (min-width: 1024px) {
+
+  .hero .carousel-control-prev,
+  .hero .carousel-control-next {
+    width: 5%;
+  }
+}
+
+.hero .carousel-control-next-icon,
+.hero .carousel-control-prev-icon {
+  background: none;
+  font-size: 32px;
+  line-height: 1;
+}
+
+.hero .carousel-indicators {
+  list-style: none;
+}
+
+.hero .carousel-indicators li {
+  cursor: pointer;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+
+
+
+/* .hero img {
   position: absolute;
   inset: 0;
   display: block;
@@ -951,36 +1196,36 @@ section,
   .hero p {
     font-size: 18px;
   }
-}
+} */
 
 /*--------------------------------------------------------------
-# About Section
+# Actual Section
 --------------------------------------------------------------*/
-.about .content h3 {
+.actual .content h3 {
   font-size: 2rem;
   font-weight: 700;
 }
 
-.about .content ul {
+.actual .content ul {
   list-style: none;
   padding: 0;
 }
 
-.about .content ul li {
+.actual .content ul li {
   padding-bottom: 10px;
 }
 
-.about .content ul i {
+.actual .content ul i {
   font-size: 1.25rem;
   margin-right: 4px;
   color: var(--accent-color);
 }
 
-.about .content p:last-child {
+.actual .content p:last-child {
   margin-bottom: 0;
 }
 
-.about .content .read-more {
+.actual .content .read-more {
   background: var(--accent-color);
   color: var(--contrast-color);
   font-family: var(--heading-font);
@@ -994,20 +1239,29 @@ section,
   justify-content: center;
 }
 
-.about .content .read-more i {
+.actual .content .read-more i {
   font-size: 18px;
   margin-left: 5px;
   line-height: 0;
   transition: 0.3s;
 }
 
-.about .content .read-more:hover {
+.actual .content .read-more:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
   padding-right: 25px;
 }
 
-.about .content .read-more:hover i {
+.actual .content .read-more:hover i {
   margin-left: 10px;
+}
+
+.hover-grow {
+  height: auto;
+  transition: transform 0.3s ease; /* Smooth animation */
+}
+
+.hover-grow:hover {
+  transform: scale(1.05);
 }
 
 /*--------------------------------------------------------------
@@ -1097,6 +1351,10 @@ section,
   color: var(--contrast-color);
   font-size: 28px;
   transition: ease-in-out 0.3s;
+}
+
+.services .service-item .icon img {
+  height: 50px;
 }
 
 .services .service-item .icon::before {
@@ -1704,6 +1962,27 @@ section,
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
+/* .starter-section {
+  Add your styles here
+} */
+
+/*--------------------------------------------------------------
+# Timetable Section
+--------------------------------------------------------------*/
+
+.timetable tbody th {
+ text-align: right;
+}
+
+
+.timetable tbody td {
+  border: 2px var(--background-color) solid;
+  box-sizing: border-box;
+  font-weight: 500;
+  height: auto;
+  transition: transform 0.3s ease; /* Smooth animation */
+}
+
+.timetable tbody td:hover {
+  transform: scale(1.02);
 }

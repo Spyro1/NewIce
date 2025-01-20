@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>NewIce - RedBlack</title>
+  <title>NewIce</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="assets/img/logo.png" rel="icon">
+  <link href="assets/img/logo.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -27,13 +27,6 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Day
-  * Template URL: https://bootstrapmade.com/day-multipurpose-html-template-for-free/
-  * Updated: Aug 07 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body class="index-page">
@@ -43,41 +36,45 @@
     <div class="topbar d-flex align-items-center">
       <div class="container d-flex justify-content-center justify-content-md-between">
         <div class="contact-info d-flex align-items-center">
-          <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:newice@gmail.com">newice@gmail.com</a></i>
-          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+36 123 4567</span></i>
+          <i class="bi bi-envelope-fill d-none d-lg-flex align-items-center"><a href="mailto:newiceinfo@gmail.com">newiceinfo@gmail.com</a></i>
+          <i class="bi bi-telephone-fill d-none d-md-flex align-items-center ms-4"><span>+36 30 569 9567</span></i>
+          <i class="bi bi-geo-alt-fill d-flex align-items-center ms-4"><span>2040 Budaörs, Baross u.146. Decathlon parkoló</span></i>
         </div>
-        <div class="social-links d-none d-md-flex align-items-center">
+        <div class="social-links d-flex align-items-center">
           <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
           <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="tiktok"><i class="bi bi-tiktok"></i></a>
         </div>
       </div>
-    </div><!-- End Top Bar -->
+    </div>
+    <!-- End Top Bar -->
+    
 
     <div class="branding d-flex align-items-center">
 
       <div class="container position-relative d-flex align-items-center justify-content-between">
         <a href="index.html" class="logo d-flex align-items-center">
           <!-- Uncomment the line below if you also wish to use an image logo -->
-          <img src="assets/img/logo.png" alt="">
-          <h1 class="sitename">NewIce</h1>
+          <img src="assets/img/logo.png" alt="NewIce logo">
+          <span class="sitename">NewIce</span>
         </a>
 
         <nav id="navmenu" class="navmenu">
-          <ul>
-            <li><a href="#" class="active">Kezdőlap</a></li>
-            <li><a href="#">Nyitvatartás</a></li>
-            <li class="dropdown"><a href="#"><span>Áraink</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <ul >
+            <li><a href="index.html" class="active">Kezdőlap</a></li>
+            <li><a href="timetable.html">Nyitvatartás</a></li>
+            <li class="dropdown"><a href="prices.html"><span>Áraink</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
               <ul>
-                <li><a href="#">Belépők</a></li>
-                <li><a href="#">Korcsolyaoktatás</a></li>
-                <li><a href="#">Pályabérlés</a></li>
-                <li><a href="#">Hokisuli</a></li>
+                <li><a href="prices.html#tickets">Belépők</a></li>
+                <li><a href="prices.html#teach">Korcsolyaoktatás</a></li>
+                <li><a href="prices.html#rent">Pályabérlés</a></li>
+                <li><a href="prices.html#hockey">Hokisuli</a></li>
               </ul>
             </li>
-            <li><a href="#">Rólunk</a></li>
-            <li><a href="#">Galléria</a></li>
-            <li><a href="#">Házirend</a></li>
-            <li><a href="#">Kapcsolat</a></li>
+            <li><a href="about-us.html">Rólunk</a></li>
+            <li><a href="gallery.html">Galléria</a></li>
+            <li><a href="rules.html">Házirend</a></li>
+            <li><a href="contact.html">Kapcsolat</a></li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
@@ -90,30 +87,90 @@
   <main class="main">
 
     <!-- Hero Section -->
-    <section id="hero" class="hero section accent-background">
+    <section id="hero" class="hero section">
 
-      <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in">
+      <div id="hero-carousel" class="carousel slide carousel-fade dark-background" data-bs-ride="carousel" data-bs-interval="5000">
+
+        <div class="carousel-item active">
+          <img src="assets/img/hero_1.jpg" alt="">
+          <div class="carousel-container">
+            <h2>Üdvözöljük a NewIce jégpályán!</h2>
+            <p>Nyitva szeptembertől májusig</p>
+            <a href="#actual" class="btn-get-started">Aktuális események</a>
+            <a href="#actual" class="btn-scroll" title="Scroll Down"><i class="bi bi-chevron-down"></i></a>
+          </div>
+        </div>
+        <!-- End Carousel Item -->
+
+        <div class="carousel-item">
+          <img src="assets/img/hero_2.jpg" alt="">
+          <div class="carousel-container">
+            <h2>Jégfolyosó üzemel egész télen!</h2>
+            <p>A jégfolyosó idén télen is várja szeretettel a csúszó kedvűeket!</p>
+            <a href="#actual" class="btn-get-started">Aktuális események</a>
+            <a href="#actual" class="btn-scroll" title="Scroll Down"><i class="bi bi-chevron-down"></i></a>
+          </div>
+        </div>
+        <!-- End Carousel Item -->
+
+        <div class="carousel-item">
+          <img src="assets/img/hero_3.jpg" alt="">
+          <div class="carousel-container">
+            <h2>Waffel</h2>
+            <p>Finom Belga töltött Waffel-t is árulunk!</p>
+            <a href="menu.html" class="btn-get-started">Kínálatunk</a>
+            <a href="#actual" class="btn-scroll" title="Scroll Down"><i class="bi bi-chevron-down"></i></a>
+          </div>
+        </div>
+        <!-- End Carousel Item -->
+
+        <div class="carousel-item">
+          <img src="assets/img/hero_4.jpg" alt="">
+          <div class="carousel-container">
+            <h2>Jégdisco minden szombaton!</h2>
+            <p>A tinik nagy örömére idén is Jégdiscoval várunk benneteket minden szombaton!</p>
+            <a href="disco.html" class="btn-get-started">Aktuális események</a>
+            <a href="#actual" class="btn-scroll" title="Scroll Down"><i class="bi bi-chevron-down"></i></a>
+          </div>
+        </div>
+        <!-- End Carousel Item -->
+
+        <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+        </a>
+
+        <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+        </a>
+
+        <ol class="carousel-indicators"></ol>
+
+      </div>
+      <!-- <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in">
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row justify-content-start">
           <div class="col-lg-8">
             <h2>Üdvözöljük a NewIce jégpályán!</h2>
             <p>Nyitva szeptembertől májusig</p>
-            <a href="#about" class="btn-get-started">A jégpályáról</a>
+            <a href="#actual" class="btn-get-started">Aktuális események</a>
           </div>
         </div>
-      </div>
+      </div> -->
 
-    </section><!-- /Hero Section -->
+    </section>
+    <!-- /Hero Section -->
 
-    <!-- About Section -->
-    <section id="about" class="about section">
+    
 
-      <!-- Section Title -->
+    <!-- Actual Section -->
+    <section id="actual" class="actual section">
+
+      <!-- Actual Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <span>Aktuális<br></span>
-        <h2>Aktuális<br></h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <span>Aktuális események<br></span>
+        <h2>Aktuális események<br></h2>
+        <p>A közönség számára látogatható időpontokkal kapcsolatban kérjük minden esetben tájékozódjanak a <a href="timetable.html">Nyitvatartás</a> menü pont alatt!</p>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -121,19 +178,18 @@
         <div class="row gy-4">
 
           <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-up" data-aos-delay="100">
-            <img src="assets/img/cta-bg2.jpg" class="img-fluid" alt="">
+            <img src="assets/img/actual/aktualis-korcsolya-oktatas.png" class="img-fluid hover-grow" alt="">
           </div>
 
           <div class="col-lg-6 order-2 order-lg-1 content" data-aos="fade-up" data-aos-delay="200">
-            <h3>Voluptatem dignissimos provident quasi corporis</h3>
+            <h3>Tanulj meg korizni, ha már tudsz, fejleszd a kori tudásod!</h3>
             <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
+              Minden szinten, minden korosztály részére – szakképezett oktatóink segítségével!
             </p>
             <ul>
-              <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Duis aute irure dolor in reprehenderit in voluptate velit.</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Kori suli – oktatás kezdő szinten gyerekeknek</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Középhaladó, haladó és felnőtteknek is</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Magán korcsolya oktatást is vállalnak oktatóink</span></li>
             </ul>
             <a href="#" class="read-more"><span>Bővebben</span><i class="bi bi-arrow-right"></i></a>
           </div>
@@ -142,12 +198,131 @@
 
       </div>
 
-    </section><!-- /About Section -->
+    </section>
+    <!-- /Actual Section -->
 
-    </section><!-- /Services Section -->
+    <!-- Services Section -->
+    <section id="services" class="services section gradient-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <span>Szolgáltatásaink</span>
+        <h2>Szolgáltatásaink</h2>
+        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      </div>
+      <!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item  position-relative">
+              <div class="icon">
+                 <img src="assets/img/icons/ice-skating-people.png" alt="">
+              </div>
+              <a href="#" class="stretched-link">
+                <h3>Közönségkorcsolya</h3>
+              </a>
+              <p>Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis tempore et consequatur.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <img src="assets/img/icons/ice-skating.png" alt="">
+              </div>
+              <a href="#" class="stretched-link">
+                <h3>Korcsolyaoktatás</h3>
+              </a>
+              <p>Ut autem aut autem non a. Sint sint sit facilis nam iusto sint. Libero corrupti neque eum hic non ut nesciunt dolorem.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <img src="assets/img/icons/hockey-field.png" alt="">
+              </div>
+              <a href="#" class="stretched-link">
+                <h3>Pályabérlés</h3>
+              </a>
+              <p>Ut excepturi voluptatem nisi sed. Quidem fuga consequatur. Minus ea aut. Vel qui id voluptas adipisci eos earum corrupti.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <img src="assets/img/icons/birthday-cake.png" alt="">
+              </div>
+              <a href="#" class="stretched-link">
+                <h3>Szülinapok</h3>
+              </a>
+              <p>Non et temporibus minus omnis sed dolor esse consequatur. Cupiditate sed error ea fuga sit provident adipisci neque.</p>
+              <a href="#" class="stretched-link"></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <img src="assets/img/icons/hockey-sticks.png" alt="">
+              </div>
+              <a href="#" class="stretched-link">
+                <h3>Hokicsapatok</h3>
+              </a>
+              <p>Cumque et suscipit saepe. Est maiores autem enim facilis ut aut ipsam corporis aut. Sed animi at autem alias eius labore.</p>
+              <a href="#" class="stretched-link"></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <img src="assets/img/icons/group.png" alt="">
+              </div>
+              <a href="#" class="stretched-link">
+                <h3>Céges rendezvények</h3>
+              </a>
+              <p>Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque non et debitis iure. Corrupti recusandae ducimus enim.</p>
+              <a href="#" class="stretched-link"></a>
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+      </div>
+
+    </section>
+    <!-- /Services Section -->
+
+
+    <!-- Pricing Section -->
+    <!-- <section id="pricing" class="pricing section">
+
+      <!-- Section Title -->
+      <!-- <div class="container section-title" data-aos="fade-up">
+        <span>Belépők</span>
+        <h2>Belépők</h2>
+        <p>A belőpők egyszeri alkalmi belépésre jogosítanak fel, ami addig érvényes ameddig a jégpálya területén tartózkodsz.</p>
+      </div>
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-4"  data-aos="fade-up" data-aos-delay="100">
+            
+          </div>
+        </div>
+
+        
+      </div>
+
+    </section> --> 
+    <!-- /Pricing Section -->
 
     <!-- Call To Action Section -->
-    <section id="call-to-action" class="call-to-action section dark-background">
+    <!-- <section id="call-to-action" class="call-to-action section dark-background">
 
       <img src="assets/img/cta-bg2.jpg" alt="">
 
@@ -163,7 +338,74 @@
         </div>
       </div>
 
-    </section><!-- /Call To Action Section -->
+    </section> -->
+    <!-- /Call To Action Section -->
+
+    <footer id="footer" class="footer position-relative dark-background">
+
+      <div class="container footer-top">
+        <div class="row g-5">
+          <div class="col-sm-12 col-md-6">
+            <div class="footer-about">
+              <a href="index.html" class="logo sitename d-flex align-items-center"><img src="assets/img/logo.png" alt="NewIce logo"><span>NewIce</span></a>
+              <div class="footer-contact pt-3">
+                <p>2040 Budaörs, Baross u.146. Decathlon parkoló</p>
+                <p class="mt-3"><strong>Telefon:</strong> <span>+36 30 569 9567</span></p>
+                <p><strong>Email:</strong> <span>newiceinfo@gmail.com</span></p>
+              </div>
+              <div class="social-links d-flex mt-4">
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-tiktok"></i></a>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-sm-6 col-md-3 footer-links px-2">
+            <h4>Hasznos linkek</h4>
+            <ul>
+              <li><a href="#">Kezdőlap</a></li>
+              <li><a href="#">Nyitvatartás</a></li>
+              <li><a href="#">Áraink</a></li>
+              <li><a href="#">Rólunk</a></li>
+              <li><a href="#">Galléria</a></li>
+              <li><a href="#">Házirend</a></li>
+            </ul>
+          </div>
+  
+          <div class="col-sm-6 col-md-3 footer-links">
+            <h4>Ezek is érdekesek lehetnek</h4>
+            <ul>
+              <li><a href="#">Pályabérlés</a></li>
+              <li><a href="#">Hokicsapatok</a></li>
+              <li><a href="#">Korcsolyaoktatás</a></li>
+              <li><a href="#">Szülinapok</a></li>
+              <li><a href="#">Budaörsi Villámok</a></li>
+            </ul>
+          </div>
+  
+          <!-- <div class="col-lg-4 col-md-12 footer-newsletter">
+            <h4>Our Newsletter</h4>
+            <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
+            <form action="forms/newsletter.php" method="post" class="php-email-form">
+              <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Your subscription request has been sent. Thank you!</div>
+            </form>
+          </div> -->
+  
+        </div>
+      </div>
+  
+      <div class="container copyright text-center">
+        <p><span>Copyright</span> © 2025 <strong class="px-1 sitename">NewIce</strong> - <span>Minden jog fenntartva</span></p>
+        <div class="credits">
+          A weboldalt készítette: <a href="">Szenes Márton</a>
+        </div>
+      </div>
+  
+    </footer>
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
