@@ -60,8 +60,8 @@
 }
 
 .gradient-background {
-  background: rgb(150,233,252);
-  background: linear-gradient(0deg, rgba(150,233,252,0.958420868347339) 40%, rgba(150,233,252,0) 100%);
+  background: rgb(36,203,211);
+  background: linear-gradient(0deg, rgba(36,203,211,1) 0%, rgba(36,203,211,0) 100%);
   /* background: rgb(6,6,6);
   background: linear-gradient(0deg, rgba(6,6,6,1) 0%, rgba(150,233,252,0) 10%); */
 }
@@ -1383,6 +1383,9 @@ section,
 }
 
 .services .service-item:hover {
+  /* background-position: relative;
+  background: linear-gradient(0deg, rgba(36,203,211,1) 0%, rgba(36,203,211,0) 100%);
+  border-color: linear-gradient(0deg, rgba(36,203,211,1) 0%, rgba(36,203,211,0) 100%); */
   background: var(--accent-color);
   border-color: var(--accent-color);
 }
