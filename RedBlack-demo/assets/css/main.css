@@ -66,6 +66,14 @@
   background: linear-gradient(0deg, rgba(6,6,6,1) 0%, rgba(150,233,252,0) 10%); */
 }
 
+/* .btn-primary {
+  background-color: var(--nav-hover-color);
+  border-color: var(--nav-hover-color);
+  color: var(--default-color);
+  font-family: var(--default-font);
+} */
+
+
 /* Smooth scroll */
 :root {
   scroll-behavior: smooth;
@@ -1988,4 +1996,15 @@ section,
 
 .timetable tbody td:hover {
   transform: scale(1.02);
+}
+
+.timetable .nav-link {
+  color: var(--default-color);
+}
+.timetable .nav-link {
+  color: var(--default-color);
+}
+
+.timetable .nav-link .active {
+  color: var(--accent-color);
 }

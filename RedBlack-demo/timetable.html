@@ -28,6 +28,7 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <!-- <link href="assets/css/custom-theme.css" rel="stylesheet"> -->
 
 </head>
 
@@ -40,9 +41,9 @@
         <div class="contact-info d-flex align-items-center">
           <i class="bi bi-envelope-fill d-none d-lg-flex align-items-center"><a href="mailto:newiceinfo@gmail.com">newiceinfo@gmail.com</a></i>
           <i class="bi bi-telephone-fill d-none d-md-flex align-items-center ms-4"><span><a href="tel:+36305699567">+36 30 569 9567</a></span></i>
-          <i class="bi bi-geo-alt-fill d-flex align-items-center ms-4"><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwj5jOetmYWLAxXrQlUIHfPMK4AQ4kB6BAg6EAM&url=%2Fmaps%2Fplace%2F%2Fdata%3D!4m2!3m1!1s0x4741e081524a6aab%3A0xabf66f53b5f548fe%3Fsa%3DX%26ved%3D1t%3A8290%26ictx%3D111&usg=AOvVaw2_z6fP-74wvJvfpsjspqf8&opi=89978449"><span>2040 Budaörs, Baross u.146. Decathlon parkoló</span></a></i>
+          <i class="bi bi-geo-alt-fill d-flex align-items-center ms-4"><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwj5jOetmYWLAxXrQlUIHfPMK4AQ4kB6BAg6EAM&url=%2Fmaps%2Fplace%2F%2Fdata%3D!4m2!3m1!1s0x4741e081524a6aab%3A0xabf66f53b5f548fe%3Fsa%3DX%26ved%3D1t%3A8290%26ictx%3D111&usg=AOvVaw2_z6fP-74wvJvfpsjspqf8&opi=89978449">2040 Budaörs, Baross u.146. Decathlon parkoló</a></i>
         </div>
-        <div class="social-links d-flex align-items-center">
+        <div class="social-links d-none d-sm-flex align-items-center">
           <a href="https://www.facebook.com/NewIceJegpalyaBudaors/?ref=embed_page" class="facebook" title="Facebook"><i class="bi bi-facebook"></i></a>
           <a href="https://www.instagram.com/newicejegpalya?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="instagram" title="Instagram"><i class="bi bi-instagram"></i></a>
           <a href="#" class="tiktok" title="Hamarosan"><i class="bi bi-tiktok"></i></a>
@@ -50,6 +51,7 @@
       </div>
     </div>
     <!-- End Top Bar -->
+    
 
     <div class="branding d-flex align-items-center">
 
@@ -60,12 +62,17 @@
           <span class="sitename">NewIce</span>
         </a>
 
+        <div class="social-links d-flex d-sm-none">
+          <a href="https://www.facebook.com/NewIceJegpalyaBudaors/?ref=embed_page" class="facebook" title="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/newicejegpalya?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="instagram" title="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="tiktok" title="Hamarosan"><i class="bi bi-tiktok"></i></a>
+        </div>
+
         <nav id="navmenu" class="navmenu">
           <ul>
             <li><a href="index.html">Kezdőlap</a></li>
             <li><a href="timetable.html" class="active">Nyitvatartás</a></li>
-            <li class="dropdown"><a href="prices.html"><span>Áraink</span> <i
-                  class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <li class="dropdown"><a href="prices.html"><span>Áraink</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
               <ul>
                 <li><a href="prices.html#tickets">Belépők</a></li>
                 <li><a href="prices.html#teach">Korcsolyaoktatás</a></li>
@@ -89,7 +96,7 @@
   <main class="main">
 
     <!-- Page Title -->
-    <div class="page-title accent-background" data-aos="fade">
+    <div class="page-title accent-background" data-aos="fade-down">
       <div class="container">
         <nav class="breadcrumbs">
           <ol>
@@ -103,16 +110,21 @@
     <!-- End Page Title -->
 
     <!-- Timetable Section Section -->
-    <section id="timetable" class="timetable section">
+    <section id="timetable" class="timetable section px-3">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up" data-aos-delay="100">
         <span>Nyitvatartás<br></span>
         <h2>Nyitvatartás</h2>
-        <p>A jégpálya nyutvatartása minden héten változó. Csekkold le, hogy nyitva vagyunk-e mielőtt jönnél!</p>
+        <p>A benti fedett jégpálya nyitvatartása minden héten változó. Csekkold le, hogy nyitva vagyunk-e mielőtt jönnél!</p>
       </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="200">
+    
+      
+      <div class="container alert alert-info" role="alert" data-aos="fade-up" data-aos-delay="150">
+        <i class="bi bi-info-circle-fill pe-2"></i> A Jéglabirintus egész nap 8-20 között nyitva van a benti fedett jégpálya nyitvatartásától függetlenül!
+      </div>
+      
+      <div class="container d-none d-lg-block" data-aos="fade-up" data-aos-delay="200">
         <table class="table table-borderless table-responsive-md">
           <thead>
             <tr class="text-center">
@@ -129,13 +141,13 @@
           <tbody class="text-center">
             <tr>
               <th scope="row">6:00</th>
-              <td rowspan="2" class="bg-danger">Zárva</td>
-              <td rowspan="1" class="bg-danger">Zárva</td>
-              <td rowspan="1" class="bg-danger">Zárva</td>
-              <td rowspan="1" class="bg-danger">Zárva</td>
-              <td rowspan="1" class="bg-danger">Zárva</td>
-              <td rowspan="1" class="bg-danger">Zárva</td>
-              <td rowspan="2" class="bg-danger">Zárva</td>
+              <td rowspan="2" class="bg-danger text-light">Zárva</td>
+              <td rowspan="1" class="bg-danger text-light">Zárva</td>
+              <td rowspan="1" class="bg-danger text-light">Zárva</td>
+              <td rowspan="1" class="bg-danger text-light">Zárva</td>
+              <td rowspan="1" class="bg-danger text-light">Zárva</td>
+              <td rowspan="1" class="bg-danger text-light">Zárva</td>
+              <td rowspan="2" class="bg-danger text-light">Zárva</td>
             </tr>
             <tr>
               <th scope="row">8:00</th>
@@ -143,12 +155,12 @@
               <td rowspan="5" class="bg-warning">Suli</td>
               <td rowspan="3" class="bg-warning">Suli</td>
               <td rowspan="4" class="bg-warning">Suli</td>
-              <td rowspan="8"class="bg-primary">Közönségjég</td>
+              <td rowspan="8"class="bg-success text-light">Közönségjég</td>
             </tr>
             <tr>
               <th scope="row">10:00</th>
-              <td rowspan="7"class="bg-primary">Közönségjég</td>
-              <td rowspan="6"class="bg-primary">Közönségjég</td>              
+              <td rowspan="7"class="bg-success text-light">Közönségjég</td>
+              <td rowspan="6"class="bg-success text-light">Közönségjég</td>              
             </tr>
             <tr>
               <th scope="row">12:00</th>
@@ -156,16 +168,16 @@
             </tr>
             <tr>
               <th scope="row">14:00</th>
-              <td rowspan="4"class="bg-primary">Közönségjég</td>              
+              <td rowspan="4"class="bg-success text-light">Közönségjég</td>              
             </tr>
             <tr>
               <th scope="row">16:00</th>
-              <td rowspan="3"class="bg-primary">Közönségjég</td>
-              <td rowspan="2"class="bg-primary">Közönségjég</td>
+              <td rowspan="3"class="bg-success text-light">Közönségjég</td>
+              <td rowspan="2"class="bg-success text-light">Közönségjég</td>
             </tr>
             <tr>
               <th scope="row">18:00</th>
-              <td rowspan="2"class="bg-primary">Közönségjég</td>
+              <td rowspan="2"class="bg-success text-light">Közönségjég</td>
             </tr>
             <tr>
               <th scope="row">20:00</th>
@@ -173,23 +185,111 @@
             </tr>
             <tr>
               <th scope="row">22:00</th>
-              <td rowspan="2"class="bg-danger">Zárva</td>
+              <td rowspan="2"class="bg-danger text-light">Zárva</td>
               <td rowspan="1"class="bg-info">Foglalás</td>
-              <td rowspan="2"class="bg-danger">Zárva</td>
-              <td rowspan="2"class="bg-danger">Zárva</td>
-              <td rowspan="2"class="bg-danger">Zárva</td>
+              <td rowspan="2"class="bg-danger text-light">Zárva</td>
+              <td rowspan="2"class="bg-danger text-light">Zárva</td>
+              <td rowspan="2"class="bg-danger text-light">Zárva</td>
             </tr>
             <tr>
               <th scope="row">24:00</th>
-              <td rowspan="1"class="bg-danger">Zárva</td>
-              <td rowspan="1"class="bg-danger">Zárva</td>
-              <td rowspan="1"class="bg-danger">Zárva</td>
+              <td rowspan="1"class="bg-danger text-light">Zárva</td>
+              <td rowspan="1"class="bg-danger text-light">Zárva</td>
+              <td rowspan="1"class="bg-danger text-light">Zárva</td>
             </tr>
           </tbody>
         </table>
       </div>
+      <div class="card container d-block d-lg-none" data-aos="fade-up" data-aos-delay="200">
+        <div class="card-text">
+          <!-- Tab navigáció -->
+          <ul class="nav nav-underline nav-fill mb-4" id="tabMenu" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="monday-tab" data-bs-toggle="tab" data-bs-target="#monday" type="button" role="tab" aria-controls="monday" aria-selected="false">Hétfő</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="tuesday-tab" data-bs-toggle="tab" data-bs-target="#tuesday" type="button" role="tab" aria-controls="tuesday" aria-selected="false">Kedd</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="wednesday-tab" data-bs-toggle="tab" data-bs-target="#wednesday" type="button" role="tab" aria-controls="wednesday" aria-selected="false">Szerda</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="thursday-tab" data-bs-toggle="tab" data-bs-target="#thursday" type="button" role="tab" aria-controls="thursday" aria-selected="false">Csütörtök</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="friday-tab" data-bs-toggle="tab" data-bs-target="#friday" type="button" role="tab" aria-controls="friday" aria-selected="false">Péntek</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="saturday-tab" data-bs-toggle="tab" data-bs-target="#saturday" type="button" role="tab" aria-controls="saturday" aria-selected="false">Szombat</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="sunday-tab" data-bs-toggle="tab" data-bs-target="#sunday" type="button" role="tab" aria-controls="sunday" aria-selected="false">Vasárnap</button>
+            </li>
+          </ul>
+        </div>
 
-    </section><!-- /Starter Section Section -->
+        
+        <!-- Tab tartalom -->
+        <div class="tab-content" id="tabContent">
+          <div class="tab-pane fade" id="monday" role="tabpanel" aria-labelledby="monday-tab">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item d-flex justify-content-between">6:00–10:00 <span class="text-danger">Zárva</span></li>
+              <li class="list-group-item d-flex justify-content-between">10:00–22:00 <span class="text-success">Közönségjég</span></li>
+              <li class="list-group-item d-flex justify-content-between">22:00–24:00 <span class="text-danger">Zárva</span></li>
+            </ul>
+          </div>
+          <div class="tab-pane fade" id="tuesday" role="tabpanel" aria-labelledby="tuesday-tab">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item d-flex justify-content-between">6:00–8:00 <span class="text-danger">Zárva</span></li>
+              <li class="list-group-item d-flex justify-content-between">8:00–16:00 <span class="text-warning">Suli</span></li>
+              <li class="list-group-item d-flex justify-content-between">16:00–22:00 <span class="text-success">Közönségjég</span></li>
+              <li class="list-group-item d-flex justify-content-between">22:00–24:00 <span class="text-danger">Zárva</span></li>
+            </ul>
+          </div>
+          <div class="tab-pane fade" id="wednesday" role="tabpanel" aria-labelledby="wednesday-tab">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item d-flex justify-content-between">6:00–8:00 <span class="text-danger">Zárva</span></li>
+              <li class="list-group-item d-flex justify-content-between">8:00–18:00 <span class="text-warning">Suli</span></li>
+              <li class="list-group-item d-flex justify-content-between">18:00–20:00 <span class="text-success">Közönségjég</span></li>
+              <li class="list-group-item d-flex justify-content-between">20:00–22:00 <span class="text-info">Foglalás</span></li>
+              <li class="list-group-item d-flex justify-content-between">22:00–24:00 <span class="text-danger">Zárva</span></li>
+            </ul>
+          </div>
+          <div class="tab-pane fade" id="thursday" role="tabpanel" aria-labelledby="thursday-tab">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item d-flex justify-content-between">6:00–8:00 <span class="text-danger">Zárva</span></li>
+              <li class="list-group-item d-flex justify-content-between">8:00–14:00 <span class="text-warning">Suli</span></li>
+              <li class="list-group-item d-flex justify-content-between">14:00–22:00 <span class="text-success">Közönségjég</span></li>
+              <li class="list-group-item d-flex justify-content-between">22:00–24:00 <span class="text-danger">Zárva</span></li>
+            </ul>
+          </div>
+          <div class="tab-pane fade" id="friday" role="tabpanel" aria-labelledby="friday-tab">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item d-flex justify-content-between">6:00–8:00 <span class="text-danger">Zárva</span></li>
+              <li class="list-group-item d-flex justify-content-between">8:00–14:00 <span class="text-warning">Suli</span></li>
+              <li class="list-group-item d-flex justify-content-between">14:00–18:00 <span class="text-success">Közönségjég</span></li>
+              <li class="list-group-item d-flex justify-content-between">18:00–20:00 <span class="text-info">Foglalás</span></li>
+              <li class="list-group-item d-flex justify-content-between">20:00–24:00 <span class="text-danger">Zárva</span></li>
+            </ul>
+          </div>
+          <div class="tab-pane fade" id="saturday" role="tabpanel" aria-labelledby="saturday-tab">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item d-flex justify-content-between">6:00–8:00 <span class="text-danger">Zárva</span></li>
+              <li class="list-group-item d-flex justify-content-between">8:00–22:00 <span class="text-success">Közönségjég</span></li>
+              <li class="list-group-item d-flex justify-content-between">22:00–24:00 <span class="text-danger">Zárva</span></li>
+            </ul>
+          </div>
+          <div class="tab-pane fade" id="sunday" role="tabpanel" aria-labelledby="sunday-tab">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item d-flex justify-content-between">6:00–10:00 <span class="text-danger">Zárva</span></li>
+              <li class="list-group-item d-flex justify-content-between">10:00–20:00 <span class="text-success">Közönségjég</span></li>
+              <li class="list-group-item d-flex justify-content-between">20:00–24:00 <span class="text-danger">Zárva</span></li>
+            </ul>
+          </div>
+        </div>       
+      </div>      
+    </section>
+    <!-- /Timetable Section Section -->
 
   </main>
 
@@ -278,8 +378,46 @@
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 
   <!-- Main JS File -->
+  <script>
+      // == Sets the selected day in the tavs to the current day ==
+      
+      // Get the current day of the week (0 = Sunday, 1 = Monday, ..., 6 = Saturday)
+      const days = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
+      const todayIndex = new Date().getDay();
+      const today = days[todayIndex];
+
+      // Remove the active class from all nav-links
+      const navLinks = document.querySelectorAll(".nav-link");
+      navLinks.forEach(link => link.classList.remove("active"));
+
+      // Add the active class to the nav-link that matches the current day
+      const todayTab = document.getElementById(`${today}-tab`);
+      if (todayTab) {
+        todayTab.classList.add("active");
+        todayTab.setAttribute("aria-selected", "true");
+      }
+
+      // Optional: Set aria-selected="false" for all other tabs
+      navLinks.forEach(link => {
+        if (link !== todayTab) {
+          link.setAttribute("aria-selected", "false");
+        }
+      });
+
+      // Remove the active class from all tab-pane
+      const tabPanes = document.querySelectorAll(".tab-pane");
+      tabPanes.forEach(link => link.classList.remove("show"));
+      tabPanes.forEach(link => link.classList.remove("active"));
+
+      // Add the active class to the tab-pane that matches the current day
+      const todayPane = document.getElementById(`${today}`);
+      if (todayPane) {
+        todayPane.classList.add("show");
+        todayPane.classList.add("active");
+      }
+  </script>
   <script src="assets/js/main.js"></script>
 
 </body>
 
-</html>
+</html> 
