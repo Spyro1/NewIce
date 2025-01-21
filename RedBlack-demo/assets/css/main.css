@@ -250,6 +250,12 @@ h6 {
   font-weight: 700;
   text-transform: uppercase;
   color: var(--heading-color);
+  transition: 0.6s ease-in-out;
+}
+
+.header .logo .sitename:hover {
+  color: var(--accent-color);
+  
 }
 
 /*--------------------------------------------------------------
@@ -1275,6 +1281,12 @@ section,
 /*--------------------------------------------------------------
 # Cards Section
 --------------------------------------------------------------*/
+
+.card {
+  border-radius: 0;
+}
+
+
 .cards .card {
   background-color: var(--surface-color);
   color: var(--default-color);
@@ -1971,13 +1983,6 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Starter Section Section
---------------------------------------------------------------*/
-/* .starter-section {
-  Add your styles here
-} */
-
-/*--------------------------------------------------------------
 # Timetable Section
 --------------------------------------------------------------*/
 
@@ -1987,7 +1992,8 @@ section,
 
 
 .timetable tbody td {
-  border: 2px var(--background-color) solid;
+  border: 3px var(--background-color) solid;
+  /* border-radius: 1em; */
   box-sizing: border-box;
   font-weight: 500;
   height: auto;
