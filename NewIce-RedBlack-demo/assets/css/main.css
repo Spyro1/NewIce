@@ -23,6 +23,7 @@
   --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #191919; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #24CBD3; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-dark-color: #037f89;
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
@@ -66,12 +67,9 @@
   background: linear-gradient(0deg, rgba(6,6,6,1) 0%, rgba(150,233,252,0) 10%); */
 }
 
-/* .btn-primary {
-  background-color: var(--nav-hover-color);
-  border-color: var(--nav-hover-color);
-  color: var(--default-color);
-  font-family: var(--default-font);
-} */
+.text-accent {
+  color: var(--accent-color);
+}
 
 
 /* Smooth scroll */
@@ -86,6 +84,11 @@ body {
   color: var(--default-color);
   background-color: var(--background-color);
   font-family: var(--default-font);
+}
+
+/* Remove border radius on every element*/
+* {
+  border-radius: 0px !important;
 }
 
 a {
@@ -253,9 +256,24 @@ h6 {
   transition: 0.6s ease-in-out;
 }
 
-.header .logo .sitename:hover {
-  color: var(--accent-color);
-  
+.header .logo::hover {
+  color: var(--accent-color);  
+}
+
+
+.header .logo .sitename::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px; /* Thickness of the underline */
+  width: 0;
+  background-color: var(--contrast-color); /* Underline color */
+  transition: width 0.3s ease; /* Smooth animation */
+}
+
+.header .logo:hover .sitename::after {
+  width: 20%; /* Expands underline fully*/
 }
 
 /*--------------------------------------------------------------
@@ -1145,73 +1163,6 @@ section,
   }
 }
 
-
-
-
-/* .hero img {
-  position: absolute;
-  inset: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 1;
-}
-
-.hero:before {
-  content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 30%);
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-}
-
-.hero .container {
-  position: relative;
-  z-index: 3;
-}
-
-.hero h2 {
-  margin: 0;
-  font-size: 48px;
-  text-transform: uppercase;
-  font-weight: 700;
-}
-
-.hero p {
-  margin: 10px 0 0 0;
-  font-size: 24px;
-  color: var(--heading-color);
-}
-
-.hero .btn-get-started {
-  color: var(--default-color);
-  font-weight: 400;
-  font-size: 15px;
-  display: inline-block;
-  padding: 8px 30px;
-  margin: 30px 0 0 0;
-  transition: 0.5s;
-  text-transform: uppercase;
-  border: 2px solid color-mix(in srgb, var(--default-color), transparent 20%);
-}
-
-.hero .btn-get-started:hover {
-  color: var(--contrast-color);
-  background: var(--accent-color);
-  border-color: var(--accent-color);
-}
-
-@media (max-width: 768px) {
-  .hero h2 {
-    font-size: 32px;
-  }
-
-  .hero p {
-    font-size: 18px;
-  }
-} */
-
 /*--------------------------------------------------------------
 # Actual Section
 --------------------------------------------------------------*/
@@ -1271,7 +1222,7 @@ section,
 
 .hover-grow {
   height: auto;
-  transition: transform 0.3s ease; /* Smooth animation */
+  transition: transform 0.3s ease-in-out; /* Smooth animation */
 }
 
 .hover-grow:hover {
@@ -2012,4 +1963,78 @@ section,
 
 .timetable .nav-link .active {
   color: var(--accent-color);
+}
+
+
+/*--------------------------------------------------------------
+# Prices Section
+--------------------------------------------------------------*/
+
+.prices .card-header{
+  background-color: var(--accent-dark-color);
+}
+.prices .card-header *{
+  color: var(--contrast-color);
+}
+.prices .card{
+  border-color: var(--accent-dark-color);
+}
+
+.prices .column {
+  display: flex;
+  flex-direction: column;
+}
+
+/*--------------------------------------------------------------
+# Hover animations
+--------------------------------------------------------------*/
+/* Add a transition effect to the card */
+.hover-up {
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Add hover effect to move the card up and add shadow */
+.hover-up:hover {
+  transform: translateY(-15px);
+}
+
+/* Create an underline animation effect for the h3 */
+.hover-up .card-title {
+  position: relative;
+  display: inline-block;
+  overflow: hidden; /* Ensures animation stays within bounds */
+}
+
+.hover-up .card-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px; /* Thickness of the underline */
+  width: 0;
+  background-color: var(--contrast-color); /* Underline color */
+  transition: width 0.3s ease; /* Smooth animation */
+}
+/* Highlight the inner h3 on hover */
+/* .hover-up:hover .card-title {
+  color: var(--accent-color); 
+  transition: color 0.3s ease-in-out;
+} */
+
+.hover-up:hover .card-title::after {
+  width: 100%; /* Expands underline fully */
+}
+
+
+.hover-zoom {
+  border-radius: 0px;
+  overflow: hidden;
+}
+
+.hover-zoom img {
+  transition: 0.6s;
+}
+
+.hover-zoom:hover img {
+  transform: scale(1.2);
 }
